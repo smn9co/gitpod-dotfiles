@@ -14,4 +14,7 @@ source scripts/git_sign_config.sh
 echo -e "\nInstalling Neovim..."
 source scripts/install_neovim.sh
 
+# Add Neovim config
+cp -r .config/nvim ~/.config/
+
 echo -e "\nInstallation complete!"
