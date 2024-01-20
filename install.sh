@@ -1,16 +1,14 @@
-# Write SSH key to file
-mkdir -p ~/.ssh
+#!/usr/bin/env bash
 
-echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-chmod 600 ~/.ssh/id_ed25519
+echo "Starting installation..."
 
-echo "$SSH_PUBLIC_KEY" > ~/.ssh/id_ed25519.pub
-chmod 644 ~/.ssh/id_ed25519.pub
+# Changes the current directory to the directory of the script
+cd "$(dirname "$0")"
 
-# Tell Git about the SSH key
-git config --global gpg.format ssh
-git config --global user.signingkey ~/.ssh/id_ed25519.pub
+echo -e "\nConfiguring git signing..."
+source scripts/git_sign_config.sh
 
-# Sign commits by default
-git config --global commit.gpgsign true
+echo -e "\nInstalling Neovim..."
+source scripts/install_neovim.sh
 
+echo -e "\nInstallation complete!"
