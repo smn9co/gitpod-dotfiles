@@ -2,6 +2,9 @@
 
 echo "Starting installation..."
 
+echo -e "\nInstalling tmux..."
+sudo apt-get update && sudo apt-get install -y tmux
+
 # Changes the current directory to the directory of the script
 cd "$(dirname "$0")"
 
