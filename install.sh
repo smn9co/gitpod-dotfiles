@@ -19,6 +19,6 @@ source scripts/install_neovim.sh
 cp -r config/* ~/.config/
 
 # Make sure to run ~/.bashrc when connecting via SSH
-echo 'source ~/.bashrc' >> ~/.bash_profile
+echo 'source ~/.bashrc > /dev/null' >> ~/.bash_profile
 
 echo -e "\nInstallation complete!"
