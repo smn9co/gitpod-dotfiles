@@ -18,4 +18,10 @@ source scripts/install_neovim.sh
 # Add Neovim config
 cp -r .config/nvim ~/.config/
 
+# Add tmux config
+cp -r .config/tmux ~/.config/
+
+# Make sure to run ~/.bashrc when connecting via SSH
+echo 'source ~/.bashrc' >> ~/.bash_profile
+
 echo -e "\nInstallation complete!"
