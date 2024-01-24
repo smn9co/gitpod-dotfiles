@@ -15,6 +15,10 @@ source scripts/git_sign_config.sh
 # Installing Neovim
 source scripts/install_neovim.sh
 
+# Clone and install tmux plugin manager (TPM)
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+~/.config/tmux/plugins/tpm/bin/install_plugins
+
 # Add configs
 cp -r config/* ~/.config/
 
