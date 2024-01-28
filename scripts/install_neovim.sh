@@ -17,3 +17,10 @@ mkdir -p /home/gitpod/.local/bin
 ln -s $(pwd)/squashfs-root/AppRun /home/gitpod/.local/bin/nvim
 
 cd "$WORKING_DIR"
+
+# Add configs
+mkdir -p ~/.config/nvim
+cp -r config/nvim/* ~/.config/nvim/
+
+# Synchronize (install) plugins with Lazy.nvim
+nvim --headless "+Lazy! sync" +qa
