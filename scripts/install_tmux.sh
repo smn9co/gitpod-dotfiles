@@ -6,7 +6,7 @@ sudo apt-get install -y tmux
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 # Add configs
-cp -r config/tmux/* ~/.config/tmux/
+cp -r config/tmux/. ~/.config/tmux/
 
 # Install tmux plugins
 tmux new-session -d ~/.config/tmux/plugins/tpm/scripts/install_plugins.sh

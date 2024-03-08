@@ -20,7 +20,7 @@ cd "$WORKING_DIR"
 
 # Add configs
 mkdir -p ~/.config/nvim
-cp -r config/nvim/* ~/.config/nvim/
+cp -r config/nvim/. ~/.config/nvim/
 
 # Synchronize (install) plugins with Lazy.nvim
 nvim --headless "+Lazy! sync" +qa
