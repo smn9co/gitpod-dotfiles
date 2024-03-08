@@ -10,6 +10,6 @@ return {
     },
     config = function()
       vim.keymap.set("n", "<C-n>", "<Cmd>Neotree toggle<CR>")
-    end
-  }
+    end,
+  },
 }
