@@ -23,6 +23,10 @@ cp -r config/jupyter/* ~/.config/jupyter/
 # Set Jupyter config path
 echo 'export JUPYTER_CONFIG_DIR=~/.config/jupyter' >> ~/.bash_profile
 
+# Set Neovim as default text editor
+echo 'export EDITOR=nvim' >> ~/.bash_profile
+echo 'export VISUAL=nvim' >> ~/.bash_profile
+
 # Make sure to run ~/.bashrc when connecting via SSH
 echo 'source ~/.bashrc > /dev/null' >> ~/.bash_profile
 
