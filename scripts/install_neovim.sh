@@ -18,9 +18,8 @@ ln -s $(pwd)/squashfs-root/AppRun /home/gitpod/.local/bin/nvim
 
 cd "$WORKING_DIR"
 
-# Add configs
-mkdir -p ~/.config/nvim
-cp -r config/nvim/. ~/.config/nvim/
+# Add customized kickstart
+git clone https://github.com/simadma/kickstart.nvim.git "$HOME/.config/nvim"
 
 # Synchronize (install) plugins with Lazy.nvim
 nvim --headless "+Lazy! sync" +qa
