@@ -8,7 +8,7 @@ sudo apt-get update && sudo apt-get install -y tree
 cd "$(dirname "$0")"
 
 # Configuring git signing
-source scripts/git_sign_config.sh
+# source scripts/git_sign_config.sh
 
 # Install tmux
 source scripts/install_tmux.sh
